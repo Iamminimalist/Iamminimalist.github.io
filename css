@@ -1,21 +1,16 @@
+/* General Body Styles */
 body {
     background: white;
     color: black;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100vh; /* Full viewport height */
     display: flex;
-    justify-content: center; /* Horizontally centers the content */
-    align-items: center; /* Vertically centers the content */
-    height: 100vh; /* Full height of the viewport */
-    text-align: center; /* Centers text within elements */
-}
-
-/* Wrapper to center content and control its width */
-.container {
-    width: 90%; /* You can adjust this value as needed */
-    max-width: 1200px; /* Set a max width to prevent it from being too wide */
-    text-align: center; /* Centers the text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center the text */
+    flex-direction: column; /* Stack everything vertically */
 }
 
 /* Header */
@@ -23,11 +18,13 @@ header {
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
+    width: 100%; /* Ensure header stretches across the page */
 }
 
 /* Navigation */
 nav {
     margin: 20px 0;
+    width: 100%; /* Ensure nav takes full width */
 }
 nav a {
     margin: 15px;
@@ -48,10 +45,10 @@ nav a:hover {
 /* Sections */
 section {
     margin: 50px 0;
-}
-h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
+    width: 100%; /* Ensure sections take full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center section contents horizontally */
 }
 
 /* Video Section */
@@ -66,6 +63,7 @@ iframe {
 .album {
     display: inline-block;
     margin: 20px;
+    text-align: center;
 }
 .album img {
     width: 200px;
@@ -84,5 +82,3 @@ audio {
     width: 80%;
     max-width: 400px;
 }
-
-

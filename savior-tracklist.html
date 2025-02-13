@@ -5,26 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savior Tracklist</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
-    <style>
-        /* Style for play button */
-        .play-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .play-button:disabled {
-            background-color: #ddd;
-        }
-
-        .track-item {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -38,85 +18,109 @@
     <section id="tracklist">
         <h2>Savior Tracklist</h2>
         <ol>
-            <li class="track-item">
-                <span>FUCK EVERYONE LOVE EVERYONE.</span>
-                <button class="play-button" onclick="playTrack('track1')">Play</button>
-                <audio id="track1" src="savior-track1.mp3" preload="auto"></audio>
+            <li>
+                FUCK EVERYONE LOVE EVERYONE.
+                <audio controls>
+                    <source src="savior-track1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </li>
-            <li class="track-item">
-                <span>IDK LOVE.</span>
-                <button class="play-button" onclick="playTrack('track2')">Play</button>
-                <audio id="track2" src="savior-track2.mp3" preload="auto"></audio>
+            <li>
+                IDK LOVE.
+                <audio controls>
+                    <source src="savior-track2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </li>
-            <li class="track-item">
-                <span>EXTRATERRESTRIAL.</span>
-                <button class="play-button" onclick="playTrack('track3')">Play</button>
-                <audio id="track3" src="savior-track3.mp3" preload="auto"></audio>
+            <li>
+                EXTRATERRESTRIAL.
+                <audio controls>
+                    <source src="savior-track3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </li>
-            <li class="track-item">
-                <span>RUMBLE IN THE JUNGLE.</span>
-                <button class="play-button" onclick="playTrack('track4')">Play</button>
-                <audio id="track4" src="savior-track4.mp3" preload="auto"></audio>
+            <li>
+                RUMBLE IN THE JUNGLE.
+                <audio controls>
+                    <source src="savior-track4.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </li>
-            <li class="track-item">
-                <span>REESES PUFFS.</span>
-                <button class="play-button" onclick="playTrack('track5')">Play</button>
-                <audio id="track5" src="savior-track5.mp3" preload="auto"></audio>
+            <li>
+                REESES PUFFS.
+                <audio controls>
+                    <source src="savior-track5.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </li>
-            <li class="track-item">
-                <span>FAMILY FOREVER.</span>
-                <button class="play-button" onclick="playTrack('track6')">Play</button>
-                <audio id="track6" src="savior-track6.mp3" preload="auto"></audio>
+            <li>
+                FAMILY FOREVER.
+                <audio controls>
+                    <source src="savior-track6.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </li>
-            <li class="track-item">
-                <span>SAVIOR.</span>
-                <button class="play-button" onclick="playTrack('track7')">Play</button>
-                <audio id="track7" src="savior-track7.mp3" preload="auto"></audio>
+            <li>
+                SAVIOR.
+                <audio controls>
+                    <source src="savior-track7.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </li>
-            <!-- Add more tracks here -->
+            <li>
+                Track 8: Song Title
+                <audio controls>
+                    <source src="savior-track8.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <li>
+                Track 9: Song Title
+                <audio controls>
+                    <source src="savior-track9.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <li>
+                Track 10: Song Title
+                <audio controls>
+                    <source src="savior-track10.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <li>
+                Track 11: Song Title
+                <audio controls>
+                    <source src="savior-track11.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <li>
+                Track 12: Song Title
+                <audio controls>
+                    <source src="savior-track12.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <li>
+                Track 13: Song Title
+                <audio controls>
+                    <source src="savior-track13.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+            <li>
+                Track 14: Song Title
+                <audio controls>
+                    <source src="savior-track14.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
         </ol>
     </section>
 
     <footer>
         <p>&copy; 2025 minimlism. All rights reserved.</p>
     </footer>
-
-    <script>
-        function playTrack(trackId) {
-            var audioElement = document.getElementById(trackId);
-            var allTracks = document.querySelectorAll('audio');
-            var allButtons = document.querySelectorAll('.play-button');
-
-            // Pause all other tracks
-            allTracks.forEach(function(track) {
-                if (track !== audioElement) {
-                    track.pause();
-                    track.currentTime = 0; // Reset the track to the start
-                }
-            });
-
-            // Disable all play buttons
-            allButtons.forEach(function(button) {
-                button.disabled = true;
-            });
-
-            // Play the selected track
-            if (audioElement.paused) {
-                audioElement.play();
-            } else {
-                audioElement.pause();
-                audioElement.currentTime = 0; // Reset if paused
-            }
-
-            // Enable the play button for the current track after it plays or is paused
-            audioElement.onplay = function() {
-                document.querySelector(`#${trackId} + .play-button`).disabled = false;
-            };
-
-            audioElement.onpause = function() {
-                document.querySelector(`#${trackId} + .play-button`).disabled = false;
-            };
-        }
-    </script>
 </body>
 </html>

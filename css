@@ -1,10 +1,15 @@
-/body {
+body {
     background: white;
     color: black;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically */
+    height: 100vh; /* Takes up the entire viewport height */
 }
 
 /* Header */
@@ -12,11 +17,13 @@ header {
     padding: 20px;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 }
 
 /* Navigation */
 nav {
     margin: 20px 0;
+    text-align: center;
 }
 nav a {
     margin: 15px;
@@ -37,6 +44,10 @@ nav a:hover {
 /* Sections */
 section {
     margin: 50px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the section content horizontally */
 }
 h2 {
     font-size: 22px;
@@ -55,6 +66,7 @@ iframe {
 .album {
     display: inline-block;
     margin: 20px;
+    text-align: center;
 }
 .album img {
     width: 200px;
@@ -72,5 +84,6 @@ audio {
     margin-top: 10px;
     width: 80%;
     max-width: 400px;
-}* General Styles */
+}
+
 

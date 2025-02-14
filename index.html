@@ -45,6 +45,9 @@
             width: 300px;
             height: auto;
         }
+        audio {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +61,11 @@
         </nav>
     </header>
 
+    <section id="love-letter">
+        <h2>LOVE LETTER.</h2>
+        <img src="love-letter-image.jpg" alt="Love Letter Image" style="width: 100%; max-width: 800px; height: auto; margin-bottom: 20px;">
+    </section>
+
     <section id="videos">
         <h2>music videos.</h2>
         <iframe width="560" height="315" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe>
@@ -66,13 +74,13 @@
     <section id="albums">
         <h2>albums.</h2>
         <div class="album">
-            <a href="nemesis-tracklist.html">
+            <a href="javascript:void(0);" onclick="playSong('song1.mp3')">
                 <img src="IMG_2852.jpeg" alt="Album Cover">
             </a>
             <p>NEMESIS.</p>
         </div>
         <div class="album">
-            <a href="savior-tracklist.html">
+            <a href="javascript:void(0);" onclick="playSong('song2.mp3')">
                 <img src="IMG_2851.jpeg" alt="Album Cover">
             </a>
             <p>SAVIOR.</p>
@@ -87,5 +95,22 @@
             <img src="artwork3.jpg" alt="Artwork 3">
         </div>
     </section>
+
+    <audio id="audio-player" controls style="display:none;">
+        <source id="audio-source" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playSong(song) {
+            var audioPlayer = document.getElementById('audio-player');
+            var audioSource = document.getElementById('audio-source');
+            audioSource.src = song;
+            audioPlayer.load();  // Reload the audio source
+            audioPlayer.play();  // Play the audio
+            audioPlayer.style.display = 'block';  // Show the audio player
+        }
+    </script>
 </body>
 </html>
+

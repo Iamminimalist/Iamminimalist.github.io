@@ -1,39 +1,91 @@
-<header>
-    <h1>minimlism.</h1>
-    <nav>
-        <a href="#videos">music videos.</a>
-        <a href="#albums">albums.</a>
-        <a href="#art">art.</a>
-        <a href="new-releases.html">new releases.</a>
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minimlism.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            padding: 20px;
+        }
+        h1, h2 {
+            text-transform: lowercase;
+            font-weight: normal;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+        section {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+        .album, .image-gallery img {
+            margin: 20px 0;
+        }
+        .album img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+        .image-gallery img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>minimlism.</h1>
+        <nav>
+            <a href="#videos">music videos.</a>
+            <a href="#albums">albums.</a>
+            <a href="#art">art.</a>
+            <a href="new-releases.html">new releases.</a>
+        </nav>
+    </header>
 
-<section id="videos">
-    <h2>music videos.</h2>
-    <iframe width="560" height="315" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe>
-</section>
+    <section id="videos">
+        <h2>music videos.</h2>
+        <iframe width="560" height="315" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe>
+    </section>
 
-<section id="albums">
-    <h2>albums.</h2>
-    <div class="album">
-        <a href="nemesis-tracklist.html">
-            <img src="IMG_2852.jpeg" alt="Album Cover" width="150" height="auto" style="cursor: pointer;">
-        </a>
-        <p>NEMESIS.</p>
-    </div>
-    <div class="album">
-        <a href="savior-tracklist.html">
-            <img src="IMG_2851.jpeg" alt="Album Cover" width="150" height="auto" style="cursor: pointer;">
-        </a>
-        <p>SAVIOR.</p>
-    </div>
-</section>
+    <section id="albums">
+        <h2>albums.</h2>
+        <div class="album">
+            <a href="nemesis-tracklist.html">
+                <img src="IMG_2852.jpeg" alt="Album Cover">
+            </a>
+            <p>NEMESIS.</p>
+        </div>
+        <div class="album">
+            <a href="savior-tracklist.html">
+                <img src="IMG_2851.jpeg" alt="Album Cover">
+            </a>
+            <p>SAVIOR.</p>
+        </div>
+    </section>
 
-<section id="art">
-    <h2>art.</h2>
-    <div class="image-gallery">
-        <img src="artwork1.jpg" alt="Artwork 1" width="300" height="auto">
-        <img src="artwork2.jpg" alt="Artwork 2" width="300" height="auto">
-        <img src="artwork3.jpg" alt="Artwork 3" width="300" height="auto">
-    </div>
-</section>
+    <section id="art">
+        <h2>art.</h2>
+        <div class="image-gallery">
+            <img src="artwork1.jpg" alt="Artwork 1">
+            <img src="artwork2.jpg" alt="Artwork 2">
+            <img src="artwork3.jpg" alt="Artwork 3">
+        </div>
+    </section>
+</body>
+</html>

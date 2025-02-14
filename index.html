@@ -47,6 +47,7 @@
         }
         audio {
             margin-top: 20px;
+            display: block;
         }
     </style>
 </head>
@@ -63,7 +64,7 @@
 
     <section id="love-letter">
         <h2>LOVE LETTER.</h2>
-        <img src="IMG_2854.jpeg" alt="Love Letter Image" style="width: 100%; max-width: 800px; height: auto; margin-bottom: 20px;">
+        <img src="IMG.5757.jpeg" alt="Love Letter Image" style="width: 100%; max-width: 800px; height: auto; margin-bottom: 20px;">
     </section>
 
     <section id="videos">
@@ -105,10 +106,19 @@
         function playSong(song) {
             var audioPlayer = document.getElementById('audio-player');
             var audioSource = document.getElementById('audio-source');
-            audioSource.src = song;
-            audioPlayer.load();  // Reload the audio source
-            audioPlayer.play();  // Play the audio
-            audioPlayer.style.display = 'block';  // Show the audio player
+
+            if (audioPlayer.paused || audioPlayer.ended) {
+                // If audio is paused or ended, play the song
+                if (audioSource.src !== song) {
+                    audioSource.src = song; // Update the song if it's a different one
+                    audioPlayer.load();  // Reload the audio source
+                }
+                audioPlayer.play();  // Play the audio
+                audioPlayer.style.display = 'block';  // Show the audio player
+            } else {
+                // If audio is already playing, pause it
+                audioPlayer.pause();
+            }
         }
     </script>
 </body>

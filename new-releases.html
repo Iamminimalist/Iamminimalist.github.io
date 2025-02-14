@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new releases.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        header {
+            padding: 20px;
+        }
+        h1, h2 {
+            text-transform: lowercase;
+            font-weight: normal;
+        }
+        .release {
+            margin: 20px;
+        }
+        .release img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>new releases.</h1>
+        <nav>
+            <a href="index.html">home.</a>
+            <a href="#tracks">tracks.</a>
+            <a href="#albums">albums.</a>
+        </nav>
+    </header>
+    
+    <section id="tracks">
+        <h2>new tracks.</h2>
+        <audio controls>
+            <source src="your-track.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+    
+    <section id="albums">
+        <h2>new albums.</h2>
+        <div class="release">
+            <a href="nemesis-tracklist.html">
+                <img src="IMG_2852.jpeg" alt="Nemesis Album Cover">
+            </a>
+            <p>NEMESIS.</p>
+        </div>
+        <div class="release">
+            <a href="savior-tracklist.html">
+                <img src="IMG_2851.jpeg" alt="Savior Album Cover">
+            </a>
+            <p>SAVIOR.</p>
+        </div>
+    </section>
+</body>
+</html>
